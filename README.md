@@ -32,7 +32,7 @@ We've attached a checklist that applies to all React project development. There 
 
 _REMEMBER:_ Commit changes after finishing a meaningful unit of work (a component, a feature of functionality, a successful refactor) never hurt anyone.
 
-Use [create-react-app](https://github.com/facebook/create-react-app) to bootleg your project. We recommend you do this with `npx create-react-app --use-npm <project-name>` - this means you don't need to globally install create-react-app and risk it becoming outdated. [More on npx](https://www.npmjs.com/package/npx).
+Use [create-react-app](https://github.com/facebook/create-react-app) to bootleg your project. We recommend you do this with `npx create-react-app <project-name>` - this means you don't need to globally install create-react-app and risk it becoming outdated. [More on npx](https://www.npmjs.com/package/npx).
 
 ## Credits
 
