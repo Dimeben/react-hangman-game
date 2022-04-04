@@ -16,15 +16,17 @@ Constrain yourself to just 1 or 2 features. Only think about extending your app 
 
 1. To-Do List. Show tasks needing to be done, be able to add a new one, delete tasks.
 
-2. Noughts and Crosses. Track scores - could you make this so you could programmatically make different size boards?
+2. Wordle. Re-create a modern classic. You'll need to source a word list from somewhere but it can be hardcoded once you've found one.
 
-3. Recipe idea generator: plug in some ingredients and get a random algorithmically created method.
+3. Noughts and Crosses. Track scores - could you make this so you could programmatically make different size boards?
 
-4. Hangman. Choose from different categories, keep track of scores... how will you represent it graphically? (You could look into svg, html5 canvas, or just find some images online)
+4. Recipe idea generator: plug in some ingredients and get a random algorithmically created method.
 
-5. A resource management game - have a look at [Universal Paperclips](http://www.decisionproblem.com/paperclips/index2.html) for inspiration (think how you will need to use setTimeout / setInterval).
+5. Hangman. Choose from different categories, keep track of scores... how will you represent it graphically? (You could look into svg, html5 canvas, or just find some images online)
 
-6. Build a **Calculator app** that replicates the functionality and looks of your operating system's calculator. You could head into scientific territory if you feel brave...
+6. A resource management game - have a look at [Universal Paperclips](http://www.decisionproblem.com/paperclips/index2.html) for inspiration (think how you will need to use setTimeout / setInterval).
+
+7. Build a **Calculator app** that replicates the functionality and looks of your operating system's calculator. You could head into scientific territory if you feel brave...
 
 ## Instructions
 
