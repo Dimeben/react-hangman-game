@@ -8,11 +8,9 @@ Another great benefit of building several tiny apps is that you get to show futu
 
 ## Ideas
 
-If you're not feeling too confident, we recommend building a to-do list and gradually building up to more complicated functionality (similar to the lecture example).
+To practice your React skills you'll need an App idea to make. Be creative here, you can do anything you like but keep it relativley simple for the time being. If you're looking for inspiration then think of a common problem that you face daily or an app on your phone that you don't quite like how it works. What could you do better? Are there any Apps or sites that you use that you could re-create some functionality of but with a theme of your own?
 
-### Other ideas
-
-Constrain yourself to just 1 or 2 features. Only think about extending your app after implementing the core idea. Think of a common problem that you face daily or an app on your phone that you don't quite like how it works. What could you do better?
+There are some ideas below to get you started:
 
 1. To-Do List. Show tasks needing to be done, be able to add a new one, delete tasks.
 
