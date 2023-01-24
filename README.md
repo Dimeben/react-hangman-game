@@ -8,23 +8,25 @@ Another great benefit of building several tiny apps is that you get to show futu
 
 ## Ideas
 
-To practice your React skills you'll need an App idea to make. Be creative here, you can do anything you like but keep it relativley simple for the time being. If you're looking for inspiration then think of a common problem that you face daily or an app on your phone that you don't quite like how it works. What could you do better? Are there any Apps or sites that you use that you could re-create some functionality of but with a theme of your own?
+To practice your React skills you'll need an App idea to make. Be creative here, you can do anything you like but keep it relativeley simple for the time being. If you're looking for inspiration then think of a common problem that you face daily or an app on your phone that you don't quite like how it works. What could you do better? Are there any Apps or sites that you use that you could re-create some functionality of but with a theme of your own?
 
 There are some ideas below to get you started:
 
 1. To-Do List. Show tasks needing to be done, be able to add a new one, delete tasks.
 
-2. Wordle. Re-create a modern classic. You'll need to source a word list from somewhere but it can be hardcoded once you've found one.
+2. Random _______ generator! Replicate a 'random name generator' or 'random dnd character generator'. You will need to hard code your data.
 
-3. Noughts and Crosses. Track scores - could you make this so you could programmatically make different size boards?
+3. Wordle. Re-create a modern classic. You'll need to source a word list from somewhere but it can be hardcoded once you've found one.
 
-4. Recipe idea generator: plug in some ingredients and get a random algorithmically created method.
+4. Noughts and Crosses. Track scores - could you make this so you could programmatically make different size boards?
 
-5. Hangman. Choose from different categories, keep track of scores... how will you represent it graphically? (You could look into svg, html5 canvas, or just find some images online)
+5. Recipe idea generator: plug in some ingredients and get a random algorithmically created method.
 
-6. A resource management game - have a look at [Universal Paperclips](http://www.decisionproblem.com/paperclips/index2.html) for inspiration (think how you will need to use setTimeout / setInterval).
+6. Hangman. Choose from different categories, keep track of scores... how will you represent it graphically? (You could look into svg, html5 canvas, or just find some images online)
 
-7. Build a **Calculator app** that replicates the functionality and looks of your operating system's calculator. You could head into scientific territory if you feel brave...
+7. A resource management game - have a look at [Universal Paperclips](http://www.decisionproblem.com/paperclips/index2.html) for inspiration (think how you will need to use setTimeout / setInterval).
+
+8. Build a **Calculator app** that replicates the functionality and looks of your operating system's calculator. You could head into scientific territory if you feel brave...
 
 ## Instructions
 
