@@ -20,7 +20,8 @@ On day 1 we're going to focus on apps which _do not need any text input_ ❌📝
 
 ## Pick a tiny-app to try from this list
 
-- _Dog-Hat-O-matic_ - Use a button to switch between a picture of a dog with and without a hat on. (look in the assets/dog-hat.js for image urls)
+- _Dog-Hat-O-matic_ - Use a button to switch between a picture of a dog with and without a hat on. (look in the assets/dog-hat folder for images)
+- _Random **\_\_\_** generator_ Replicate a 'random name generator' or 'random dnd character generator'. You will need to hard code your data.
 - _Image Gallery_ - Have an array of image urls (you can use [unsplash](https://unsplash.com/) for free images or provide your own!) and make an image gallery with buttons for displaying the next image.
 - _Dice Roller_ - A dice roller where pressing a button randomly generates a single dice roll.
 - _Travel locations_ - Render a list of locations that people can visit and tick off once they've been there. Users can click on one to change it to visited and change styling accordingly.
