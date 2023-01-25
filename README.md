@@ -8,7 +8,7 @@ Another great benefit of building several tiny apps is that you get to show futu
 
 ## Instructions
 
-We've attached a checklist that applies to all React project development. There will be a few things you don't know about yet so you can ignore those steps; for now, the most important things to think about are planning out your app, then constructing a static version with no functionality, then making it do stuff!
+We've attached a checklist that applies to all React project development. The most important things to think about are planning out your app, then constructing a static version with no functionality, then making it do stuff!
 
 _REMEMBER:_ Commit changes after finishing a meaningful unit of work (a component, a feature of functionality, a successful refactor) never hurt anyone.
 
@@ -20,14 +20,14 @@ On day 1 we're going to focus on apps which _do not need any text input_ ❌📝
 
 ## Pick a tiny-app to try from this list
 
-- _Dog-Hat-O-matic_ - Use a button to switch between a picture of a dog with and without a hat on. (look in the assets/dog-hat folder for images)
+- _Dog-Hat-O-matic_ - Use a button to switch between a picture of a dog with and without a hat on. (look in the assets/dog-hat.js for image urls)
 - _Image Gallery_ - Have an array of image urls (you can use [unsplash](https://unsplash.com/) for free images or provide your own!) and make an image gallery with buttons for displaying the next image.
 - _Dice Roller_ - A dice roller where pressing a button randomly generates a single dice roll.
 - _Travel locations_ - Render a list of locations that people can visit and tick off once they've been there. Users can click on one to change it to visited and change styling accordingly.
 - _Shopping list_ - Provide the user with a list of clickable available items to buy. When you click an item, you add it to your shopping list, and can click them again to remove them.
 - _Fortune teller_ - you randomly select from a group of ten fortunes, when the user clicks a button. (If you can't think of any fortunes, check 'fortunes.js' file the assets folder)
 
-If you have made _at least_ one app from the above list ✅, you can have a go at one from this list (or try another one from above)!
+If you have made _at least_ one app from the above list ✅, you can either have a go at one from this list, try another one from the above list, or create an idea of your own 💡 (remember no text input for now!)
 
 - _Click Attack!_ - A click-speed test that tests how many times the user can click a button in 30 seconds.
 - _Swat the Button_ - A reflex-based click game where buttons appear randomly on the screen and you must click them as fast as possible.
@@ -41,14 +41,16 @@ If you've not finished the app you were working on yesterday, you can come back 
 
 - _Auto-Greeter_ - A form that asks for your name, and after it has been submitted, then adds text to the screen that says: "Hello, (your name here)"
 - _To-do list_ - an app where you can add items to the to-do list by typing them in, and clicking a submit button.
-- _Pet Namer_ - you are presented with different pets (from the pets section of the assets folder), the user must name them using text input.
+- _Pet Namer_ - you are presented with different pets (you can find pet image urls in the pet-namer.js file in the assets folder), the user must name them using text input.
 - _Names-in-a-hat generator_ - You add names one at a time, via a text input to a list of names, and then have the option to pick a random name from the list.
+
+Once you've had a go at _at least one_ of the above ideas, you can either pick another from the list to try, have a go at one of your own ideas 💡, or if you're feeling brave - have a look at the ideas below.
 
 Day 2 continued... if you want a challenge....
 
-- Wordle. Re-create a modern classic. You'll need to source a word list from somewhere but it can be hardcoded once you've found one.
-- Build a **Calculator app** that replicates the functionality and looks of your operating system's calculator. You could head into scientific territory if you feel brave...
-- Noughts and Crosses. Track scores - could you make this so you could programmatically make different size boards?
+- _Wordle_ - Re-create a modern classic. You'll need to source a word list from somewhere but it can be hardcoded once you've found one.
+- _Calculator_ - an app that replicates the functionality and looks of your operating system's calculator. You could head into scientific territory if you feel brave...
+- _Noughts and Crosses_ - The classic game which tracks scores - could you make this so you could programmatically make different size boards?
 
 ## Credits
 
