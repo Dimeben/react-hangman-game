@@ -11,4 +11,4 @@ const fortunes = [
   "Have a nice day, but not too nice.",
 ];
 
-module.exports = fortunes;
+export default fortunes;
