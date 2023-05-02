@@ -12,7 +12,7 @@ We've attached a checklist that applies to all React project development. The mo
 
 _REMEMBER:_ Commit changes after finishing a meaningful unit of work (a component, a feature of functionality, a successful refactor.) 
 
-Use [create-react-app](https://github.com/facebook/create-react-app) to bootleg your project. We recommend you do this with `npx create-react-app <project-name>` - this means you don't need to globally install create-react-app and risk it becoming outdated. [More on npx](https://www.npmjs.com/package/npx).
+Use [Vite](https://vitejs.dev) to bootleg your project.
 
 # Sprint Day 1
 
