@@ -12,7 +12,7 @@
 
 ## Setup
 
-- [ ] Create your app directory (e.g. with create-react-app)
+- [ ] Create your app directory (e.g. with Vite)
 - [ ] Run your app
 - [ ] Create a static render of blank components as per your hierarchy
 - [ ] Check everything is hooked up and the component tree is rendered
