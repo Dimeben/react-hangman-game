@@ -2,10 +2,6 @@
 
 💡 Here are some ideas to choose from:
 
-# Options
-
-💡 Here are some ideas to choose from:
-
 1. **Calculator App**
 
    - **Objective**: Build a calculator app resembling the one in your operating system. Start with basic operations and optionally expand to scientific functions.
