@@ -12,7 +12,7 @@
 2. **Dictionary App**
 
    - **Objective**: Create a dictionary app using a JSON file as the data source.
-   - **Data Source**: Utilize the JSON dictionary from the provided GitHub repository.
+   - **Data Source**: Utilize the JSON dictionary from the provided GitHub repository - [English Language Dictionary](https://github.com/adambom/dictionary)
    - **Key Features**: Search functionality, word display, definition display.
    - **State Management**: Manage state for search input and display results.
    - **Challenge**: Add features like word of the day or recent searches.
