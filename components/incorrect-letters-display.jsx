@@ -33,7 +33,7 @@ const IncorrectLettersDisplay = ({ incorrectGuesses, word }) => {
   return (
     <>
       <p>
-        {incorrectCount > 9
+        {incorrectCount > 10
           ? `You Lose! The Word was ${word}`
           : "Incorrect guesses: " +
             incorrectGuesses.map((guess) => guess[0]).join(", ")}
