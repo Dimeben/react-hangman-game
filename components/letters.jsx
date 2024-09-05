@@ -60,7 +60,10 @@ const Letters = (props) => {
         wordGuesses={wordGuesses}
         setWordGuesses={setWordGuesses}
       />
-      <CorrectLettersDisplay correctLetterGuesses={correctLetterGuesses} />
+      <CorrectLettersDisplay
+        correctLetterGuesses={correctLetterGuesses}
+        splitWord={splitWord}
+      />
     </>
   );
 };

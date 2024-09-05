@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ScoreCount from "../components/scorecount";
 import Input from "../components/input";
 import Letters from "../components/letters";
