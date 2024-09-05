@@ -33,13 +33,13 @@ const IncorrectLettersDisplay = ({ incorrectGuesses, word }) => {
   return (
     <>
       <p>
-        {incorrectCount > 10
+        {incorrectCount > 9
           ? `You Lose! The Word was ${word}`
           : "Incorrect guesses: " +
             incorrectGuesses.map((guess) => guess[0]).join(", ")}
       </p>
       <img
-        src={images[incorrectCount > 10 ? 0 : incorrectCount]}
+        src={images[incorrectCount > 9 ? 0 : incorrectCount]}
         alt={`Hangman state ${incorrectCount}`}
       />
     </>
