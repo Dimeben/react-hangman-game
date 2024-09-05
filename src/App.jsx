@@ -88,9 +88,9 @@ function App() {
   const word = [
     wordList[Math.floor(Math.random() * wordList.length)].toLowerCase(),
   ];
-  const gameTitle = "Welcome to HangMan";
+  const gameTitle = "Welcome Coding to HangMan";
   const subHeading =
-    "Type single letters to guess the word before you perish!!!";
+    "Type single letters and guess the word before you perish!!!";
   return (
     <div className="App">
       <Header gameTitle={gameTitle} subHeading={subHeading} />

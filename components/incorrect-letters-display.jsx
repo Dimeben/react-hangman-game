@@ -1,16 +1,20 @@
 const IncorrectLettersDisplay = ({ incorrectGuesses, word }) => {
+  const winner = incorrectGuesses.filter((guess) => {
+    guess === word;
+  });
+
   return (
     <>
       <p>
-        {incorrectGuesses.length > 9
+        {winner.length > 9
           ? `You Lose! The Word was ${word}`
-          : "Incorrect guesses: " + incorrectGuesses.join(", ")}
+          : "Incorrect guesses: " + winner.join(", ")}
       </p>
       <img
         src={
-          incorrectGuesses.length > 9
+          winner.length > 9
             ? `../hangman-image/Hangman 10.jpg`
-            : `../hangman-image/Hangman ${incorrectGuesses.length}.jpg`
+            : `../hangman-image/Hangman ${winner.length}.jpg`
         }
       />
     </>

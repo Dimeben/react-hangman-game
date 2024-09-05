@@ -5,7 +5,11 @@ const Input = ({
   setLetterGuesses,
   wordGuesses,
   setWordGuesses,
-  handleIncorrectWordGuesses,
+  incorrectGuesses,
+  splitWord,
+  correctLetterGuesses,
+  wordGuessed,
+  word,
 }) => {
   const [inputLetter, setInputLetter] = useState("");
   function handleLetterSubmit(event) {
@@ -27,6 +31,17 @@ const Input = ({
   function handleWordChange(event) {
     setInputWord(event.target.value);
   }
+
+  let disabled = "";
+
+  if (
+    incorrectGuesses.length > 9 ||
+    correctLetterGuesses.length === splitWord.length ||
+    wordGuessed === word[0]
+  ) {
+    disabled = "disabled";
+  }
+
   return (
     <>
       <form
@@ -44,7 +59,9 @@ const Input = ({
           maxLength={1}
           value={inputLetter}
         />
-        <button type="submit">Guess a Letter</button>
+        <button type="submit" disabled={disabled ? true : false}>
+          Guess a Letter
+        </button>
       </form>
       <form
         onSubmit={(event) => {
@@ -60,7 +77,9 @@ const Input = ({
           type="text"
           value={inputWord}
         />
-        <button type="submit">Guess the word</button>
+        <button type="submit" disabled={disabled ? true : false}>
+          Guess the word
+        </button>
       </form>
     </>
   );

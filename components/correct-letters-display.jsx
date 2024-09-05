@@ -1,4 +1,9 @@
-const CorrectLettersDisplay = ({ correctLetterGuesses, splitWord }) => {
+const CorrectLettersDisplay = ({
+  correctLetterGuesses,
+  splitWord,
+  wordGuessed,
+  word,
+}) => {
   const correctDisplay = [];
   for (let i = 0; i < splitWord.length; i++) {
     correctDisplay.push("_ ");
@@ -7,13 +12,17 @@ const CorrectLettersDisplay = ({ correctLetterGuesses, splitWord }) => {
     correctDisplay[letter[1]] = letter[0];
   });
 
+  let win = "";
+
+  if (
+    correctLetterGuesses.length === splitWord.length ||
+    wordGuessed === word[0]
+  ) {
+    win = "win";
+  }
   return (
     <>
-      <p>
-        {correctLetterGuesses.length === splitWord.length
-          ? "You Win"
-          : correctDisplay}
-      </p>
+      <p>{win ? "You Win" : correctDisplay}</p>
     </>
   );
 };

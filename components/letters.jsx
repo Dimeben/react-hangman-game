@@ -77,12 +77,17 @@ const Letters = ({ word }) => {
         letterGuesses={letterGuesses}
         wordGuesses={wordGuesses}
         setWordGuesses={setWordGuesses}
-        handleIncorrectGuess={handleIncorrectGuess}
-        handleIncorrectWordGuesses={handleIncorrectWordGuesses}
+        word={word}
+        splitWord={splitWord}
+        incorrectGuesses={incorrectGuesses}
+        correctLetterGuesses={correctLetterGuesses}
+        wordGuessed={wordGuessed}
       />
       <CorrectLettersDisplay
         correctLetterGuesses={correctLetterGuesses}
         splitWord={splitWord}
+        wordGuessed={wordGuessed}
+        word={word}
       />
       <IncorrectLettersDisplay
         word={word}
