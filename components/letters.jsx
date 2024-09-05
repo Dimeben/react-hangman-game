@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "./input";
 import CorrectLettersDisplay from "./correct-letters-display";
+import IncorrectLettersDisplay from "./incorrect-letters-display";
 
 const Letters = (props) => {
   const [letterGuesses, setLetterGuesses] = useState([]);
@@ -63,6 +64,9 @@ const Letters = (props) => {
       <CorrectLettersDisplay
         correctLetterGuesses={correctLetterGuesses}
         splitWord={splitWord}
+      />
+      <IncorrectLettersDisplay
+        incorrectLetterGuesses={incorrectLetterGuesses}
       />
     </>
   );
