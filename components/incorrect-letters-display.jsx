@@ -30,6 +30,8 @@ const IncorrectLettersDisplay = ({ incorrectGuesses, word }) => {
     (guess) => guess[0] !== word[0]
   ).length;
 
+  const imageIndex = Math.min(incorrectCount, 10);
+
   return (
     <>
       <p>
@@ -38,10 +40,7 @@ const IncorrectLettersDisplay = ({ incorrectGuesses, word }) => {
           : "Incorrect guesses: " +
             incorrectGuesses.map((guess) => guess[0]).join(", ")}
       </p>
-      <img
-        src={images[incorrectCount < 9 ? 0 : incorrectCount]}
-        alt={`Hangman state ${incorrectCount}`}
-      />
+      <img src={images[imageIndex]} alt={`Hangman state ${imageIndex}`} />
     </>
   );
 };
