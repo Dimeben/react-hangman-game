@@ -7,7 +7,15 @@ const CorrectLettersDisplay = ({ correctLetterGuesses, splitWord }) => {
     correctDisplay[letter[1]] = letter[0];
   });
 
-  return <p>{correctDisplay}</p>;
+  return (
+    <>
+      <p>
+        {correctLetterGuesses.length === splitWord.length
+          ? "You Win"
+          : correctDisplay}
+      </p>
+    </>
+  );
 };
 
 export default CorrectLettersDisplay;

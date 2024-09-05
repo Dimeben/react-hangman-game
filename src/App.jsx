@@ -78,17 +78,16 @@ function App() {
     "Token",
     "Type",
     "Variable",
-    "Version control",
-    "Virtual machine",
     "Bash",
-    "Command Line Interface",
     "Closure",
     "Container",
     "Middleware",
     "Promise",
     "Python",
   ];
-  const word = ["potato"];
+  const word = [
+    wordList[Math.floor(Math.random() * wordList.length)].toLowerCase(),
+  ];
   const gameTitle = "Welcome to HangMan";
   const subHeading =
     "Type single letters to guess the word before you perish!!!";

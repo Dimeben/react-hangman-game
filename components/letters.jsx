@@ -3,14 +3,15 @@ import Input from "./input";
 import CorrectLettersDisplay from "./correct-letters-display";
 import IncorrectLettersDisplay from "./incorrect-letters-display";
 
-const Letters = (props) => {
+const Letters = ({ word }) => {
   const [letterGuesses, setLetterGuesses] = useState([]);
   const [wordGuesses, setWordGuesses] = useState([]);
   const [correctLetterGuesses, setCorrectLetterGuesses] = useState([]);
-  const [incorrectLetterGuesses, setIncorrectLetterGuesses] = useState([]);
+  const [incorrectGuesses, setIncorrectGuesses] = useState([]);
 
-  const splitWord = props.word[0].split("");
+  const splitWord = word[0].split("");
   const newGuess = letterGuesses[letterGuesses.length - 1];
+  const wordGuessed = wordGuesses[wordGuesses.length - 1];
 
   const handleCorrectGuess = () => {
     if (
@@ -31,28 +32,42 @@ const Letters = (props) => {
       }
     }
   };
+  const incorrectGuessesArr = [];
 
   const handleIncorrectGuess = () => {
-    if (
-      newGuess &&
-      !incorrectLetterGuesses.some(([letter]) => letter === newGuess)
-    ) {
-      const incorrectGuesses = [];
+    if (newGuess && !incorrectGuesses.some(([letter]) => letter === newGuess)) {
       if (!splitWord.includes(newGuess)) {
-        incorrectGuesses.push([newGuess]);
+        incorrectGuessesArr.push([newGuess]);
       }
-      if (incorrectGuesses.length > 0) {
-        setIncorrectLetterGuesses((prevGuesses) => [
+      if (incorrectGuessesArr.length > 0) {
+        setIncorrectGuesses((prevGuesses) => [
           ...prevGuesses,
-          ...incorrectGuesses,
+          ...incorrectGuessesArr,
         ]);
       }
     }
   };
 
+  function handleIncorrectWordGuesses() {
+    if (
+      wordGuessed &&
+      !incorrectGuesses.some(([word]) => word === wordGuessed)
+    ) {
+      if (word !== wordGuessed) {
+        incorrectGuessesArr.push([wordGuessed]);
+      }
+      if (incorrectGuesses.length > 0) {
+        setIncorrectGuesses((prevGuesses) => [
+          ...prevGuesses,
+          ...incorrectGuessesArr,
+        ]);
+      }
+    }
+  }
+  console.log(incorrectGuesses);
   handleCorrectGuess();
   handleIncorrectGuess();
-
+  //   handleIncorrectWordGuesses();
   return (
     <>
       <Input
@@ -60,13 +75,16 @@ const Letters = (props) => {
         letterGuesses={letterGuesses}
         wordGuesses={wordGuesses}
         setWordGuesses={setWordGuesses}
+        handleIncorrectGuess={handleIncorrectGuess}
+        handleIncorrectWordGuesses={handleIncorrectWordGuesses}
       />
       <CorrectLettersDisplay
         correctLetterGuesses={correctLetterGuesses}
         splitWord={splitWord}
       />
       <IncorrectLettersDisplay
-        incorrectLetterGuesses={incorrectLetterGuesses}
+        word={word}
+        incorrectGuesses={incorrectGuesses}
       />
     </>
   );

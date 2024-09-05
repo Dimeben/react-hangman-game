@@ -5,6 +5,7 @@ const Input = ({
   setLetterGuesses,
   wordGuesses,
   setWordGuesses,
+  handleIncorrectWordGuesses,
 }) => {
   const [inputLetter, setInputLetter] = useState("");
   function handleLetterSubmit(event) {
@@ -48,6 +49,7 @@ const Input = ({
       <form
         onSubmit={(event) => {
           handleWordSubmit(event);
+          handleIncorrectWordGuesses;
         }}
       >
         <label htmlFor="word-input">Guess the word:</label>
