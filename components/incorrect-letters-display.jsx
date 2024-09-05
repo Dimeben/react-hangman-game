@@ -11,8 +11,8 @@ const IncorrectLettersDisplay = ({ incorrectGuesses, word }) => {
       <img
         src={
           winner.length > 10
-            ? `../hangman-image/Hangman 10.jpg`
-            : `../hangman-image/Hangman ${winner.length}.jpg`
+            ? `../src/Hangman 10.jpg`
+            : `../src/Hangman ${winner.length}.jpg`
         }
       />
     </>
