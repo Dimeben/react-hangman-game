@@ -22,7 +22,7 @@ const CorrectLettersDisplay = ({
   }
   return (
     <>
-      <p>{win ? `You Win! The Word was ${word}` : correctDisplay}</p>
+      <p>{win ? `You Win! The word was: ${word}` : correctDisplay}</p>
     </>
   );
 };
