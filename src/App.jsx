@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Game from "../components/game";
 import ScoreCount from "../components/scorecount";
 import Input from "../components/input";
 import Letters from "../components/letters";
@@ -15,8 +14,6 @@ function App() {
   return (
     <div className="App">
       <Header gameTitle={gameTitle} subHeading={subHeading} />
-      <Game />
-      <ScoreCount />
       <Letters word={word} />
     </div>
   );

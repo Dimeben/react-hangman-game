@@ -40,6 +40,7 @@ const Input = ({
           }}
           id="letter-input"
           type="text"
+          maxLength={1}
           value={inputLetter}
         />
         <button type="submit">Guess a Letter</button>
