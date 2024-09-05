@@ -39,7 +39,7 @@ const IncorrectLettersDisplay = ({ incorrectGuesses, word }) => {
             incorrectGuesses.map((guess) => guess[0]).join(", ")}
       </p>
       <img
-        src={images[incorrectCount > 9 ? 0 : incorrectCount]}
+        src={images[incorrectCount < 9 ? 0 : incorrectCount]}
         alt={`Hangman state ${incorrectCount}`}
       />
     </>
