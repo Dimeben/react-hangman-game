@@ -17,10 +17,4 @@ function App() {
     </div>
   );
 }
-
-{
-}
-// Letters = { Letters };
-// ScoreCount = { ScoreCount };
-// Game = { Game };
 export default App;
