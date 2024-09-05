@@ -1,16 +1,19 @@
 import { useState } from "react";
-import Input from "./input";
+import Input from "./Input";
 import CorrectLettersDisplay from "./correct-letters-display";
 import IncorrectLettersDisplay from "./incorrect-letters-display";
 
 const Letters = ({ word }) => {
+  console.log(word[0]);
   const [letterGuesses, setLetterGuesses] = useState([]);
   const [wordGuesses, setWordGuesses] = useState([]);
   const [correctLetterGuesses, setCorrectLetterGuesses] = useState([]);
   const [incorrectGuesses, setIncorrectGuesses] = useState([]);
 
   const splitWord = word[0].split("");
-  const newGuess = letterGuesses[letterGuesses.length - 1];
+  const newGuess = letterGuesses[letterGuesses.length - 1]
+    ? letterGuesses[letterGuesses.length - 1]
+    : "";
   const wordGuessed = wordGuesses[wordGuesses.length - 1];
 
   const handleCorrectGuess = () => {
@@ -32,44 +35,35 @@ const Letters = ({ word }) => {
       }
     }
   };
-  const incorrectGuessesArr = [];
 
   const handleIncorrectGuess = () => {
-    if (newGuess && !incorrectGuesses.some(([letter]) => letter === newGuess)) {
-      if (!splitWord.includes(newGuess)) {
-        incorrectGuessesArr.push([newGuess]);
-      }
-      if (incorrectGuessesArr.length > 0) {
-        setIncorrectGuesses((prevGuesses) => [
-          ...prevGuesses,
-          ...incorrectGuessesArr,
-        ]);
-      }
+    if (
+      newGuess &&
+      !incorrectGuesses.some(([letter]) => letter === newGuess) &&
+      !splitWord.includes(newGuess) // Check if the guess is incorrect
+    ) {
+      setIncorrectGuesses((prevGuesses) => [...prevGuesses, [newGuess]]);
     }
   };
 
-  function handleIncorrectWordGuesses() {
+  const handleIncorrectWordGuesses = () => {
     if (
       wordGuessed &&
-      !incorrectGuesses.some(([word]) => word === wordGuessed)
+      wordGuessed !== word[0] &&
+      !incorrectGuesses.some(([guess]) => guess === wordGuessed)
     ) {
-      if (word !== wordGuessed) {
-        incorrectGuessesArr.push([wordGuessed]);
-      }
-      if (incorrectGuesses.length > 0) {
-        setIncorrectGuesses((prevGuesses) => [
-          ...prevGuesses,
-          ...incorrectGuessesArr,
-        ]);
-      }
+      setIncorrectGuesses((prevGuesses) => [...prevGuesses, [wordGuessed]]);
     }
-  }
+  };
+
   function handlerCaller() {
     handleCorrectGuess();
     handleIncorrectGuess();
     handleIncorrectWordGuesses();
   }
+
   handlerCaller();
+
   return (
     <>
       <Input

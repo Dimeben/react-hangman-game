@@ -1,84 +1,68 @@
 import { useState } from "react";
 
 const Input = ({
-  letterGuesses,
-  setLetterGuesses,
-  wordGuesses,
-  setWordGuesses,
   incorrectGuesses,
   splitWord,
   correctLetterGuesses,
   wordGuessed,
   word,
+  setLetterGuesses,
+  setWordGuesses,
+  letterGuesses,
+  wordGuesses,
 }) => {
-  const [inputLetter, setInputLetter] = useState("");
+  const [letterInput, setLetterInput] = useState("");
+  const [wordInput, setWordInput] = useState("");
+
   function handleLetterSubmit(event) {
     event.preventDefault();
-    setLetterGuesses([...letterGuesses, inputLetter]);
-    setInputLetter("");
+    if (letterInput.length === 1) {
+      setLetterGuesses([...letterGuesses, letterInput]);
+      setLetterInput("");
+    }
   }
 
-  function handleLetterChange(event) {
-    setInputLetter(event.target.value);
-  }
-  const [inputWord, setInputWord] = useState("");
   function handleWordSubmit(event) {
     event.preventDefault();
-    setWordGuesses([...wordGuesses, inputWord]);
-    setInputWord("");
+    if (wordInput.length > 1) {
+      setWordGuesses([...wordGuesses, wordInput]);
+      setWordInput("");
+    }
   }
 
-  function handleWordChange(event) {
-    setInputWord(event.target.value);
-  }
-
-  let disabled = "";
-
-  if (
+  const disabled =
     incorrectGuesses.length > 9 ||
     correctLetterGuesses.length === splitWord.length ||
-    wordGuessed === word[0]
-  ) {
-    disabled = "disabled";
-  }
+    wordGuessed === word;
 
   return (
     <>
-      <form
-        onSubmit={(event) => {
-          handleLetterSubmit(event);
-        }}
-      >
+      <form onSubmit={handleLetterSubmit}>
         <label htmlFor="letter-input">Guess a Letter:</label>
         <input
-          onChange={(event) => {
-            handleLetterChange(event);
-          }}
+          onChange={(event) => setLetterInput(event.target.value)}
           id="letter-input"
           type="text"
           maxLength={1}
-          value={inputLetter}
+          value={letterInput}
+          disabled={disabled}
         />
-        <button type="submit" disabled={disabled ? true : false}>
+        <button type="submit" disabled={disabled || letterInput.length !== 1}>
           Guess a Letter
         </button>
       </form>
-      <form
-        onSubmit={(event) => {
-          handleWordSubmit(event);
-        }}
-      >
-        <label htmlFor="word-input">Guess the word:</label>
+
+      <form onSubmit={handleWordSubmit}>
+        <label htmlFor="word-input">Guess the Word:</label>
         <input
-          onChange={(event) => {
-            handleWordChange(event);
-          }}
+          onChange={(event) => setWordInput(event.target.value)}
           id="word-input"
           type="text"
-          value={inputWord}
+          value={wordInput}
+          disabled={disabled}
         />
-        <button type="submit" disabled={disabled ? true : false}>
-          Guess the word
+        <button type="submit" disabled={disabled || wordInput.length <= 1}>
+          Guess the Word
         </button>
       </form>
     </>
