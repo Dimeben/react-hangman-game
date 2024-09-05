@@ -17,7 +17,7 @@ const Input = ({
   function handleLetterSubmit(event) {
     event.preventDefault();
     if (letterInput.length === 1) {
-      setLetterGuesses([...letterGuesses, letterInput]);
+      setLetterGuesses([...letterGuesses, letterInput.toLowerCase()]);
       setLetterInput("");
     }
   }
@@ -25,7 +25,7 @@ const Input = ({
   function handleWordSubmit(event) {
     event.preventDefault();
     if (wordInput.length > 1) {
-      setWordGuesses([...wordGuesses, wordInput]);
+      setWordGuesses([...wordGuesses, wordInput.toLowerCase()]);
       setWordInput("");
     }
   }
