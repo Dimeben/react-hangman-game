@@ -64,10 +64,12 @@ const Letters = ({ word }) => {
       }
     }
   }
-  console.log(incorrectGuesses);
-  handleCorrectGuess();
-  handleIncorrectGuess();
-  //   handleIncorrectWordGuesses();
+  function handlerCaller() {
+    handleCorrectGuess();
+    handleIncorrectGuess();
+    handleIncorrectWordGuesses();
+  }
+  handlerCaller();
   return (
     <>
       <Input

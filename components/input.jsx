@@ -49,7 +49,6 @@ const Input = ({
       <form
         onSubmit={(event) => {
           handleWordSubmit(event);
-          handleIncorrectWordGuesses;
         }}
       >
         <label htmlFor="word-input">Guess the word:</label>
