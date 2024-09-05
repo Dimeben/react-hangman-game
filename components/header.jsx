@@ -10,8 +10,3 @@ const Header = (props) => {
 };
 
 export default Header;
-
-{
-  /* <h2>{props.subHeading}</h2>
-    </> */
-}

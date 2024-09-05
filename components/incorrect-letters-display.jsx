@@ -1,5 +1,5 @@
 const IncorrectLettersDisplay = ({ incorrectLetterGuesses }) => {
-  return <p>{incorrectLetterGuesses.join(", ")}</p>;
+  return <p>Incorrect guesses: {incorrectLetterGuesses.join(", ")}</p>;
 };
 
 export default IncorrectLettersDisplay;
