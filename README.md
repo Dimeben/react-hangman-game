@@ -46,7 +46,7 @@
 
 > npm run dev
 
-#### The click on the link that looks like:
+#### Then click on the link that looks like:
 
 > http://localhost:5173/
 
