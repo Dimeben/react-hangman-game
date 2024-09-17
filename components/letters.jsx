@@ -25,13 +25,13 @@ const Letters = ({ word }) => {
       for (let i = 0; i < splitWord.length; i++) {
         if (splitWord[i] === newGuess) {
           correctGuesses.push([splitWord[i], i]);
-        }
+        } 
       }
       if (correctGuesses.length > 0) {
         setCorrectLetterGuesses((prevGuesses) => [
           ...prevGuesses,
           ...correctGuesses,
-        ]);
+        ]); 
       }
     }
   };
